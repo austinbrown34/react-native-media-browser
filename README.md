@@ -9,7 +9,10 @@ The component has both iOS and Android support.
 ![](screenshots/screenshot-1.png)
 ![](screenshots/screenshot-2.png)
 
-### Installation 
+### Installation
+```npm install --save react-native-video-player react-native-video react-native-vector-icons
+react-native link react-native-video
+react-native link react-native-vector-icons```
 ```npm install react-native-photo-browser --save```
 
 ### Properties
