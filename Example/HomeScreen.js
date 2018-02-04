@@ -41,7 +41,8 @@ const EXAMPLES = [
         caption: "Broadchurch Scene"
       },
       {
-        video: "../Assets/broadchurch.mp4",
+        video:
+          "https://18skyfiregce-vimeo.akamaized.net/exp=1517743733~acl=%2F179859217%2F%2A~hmac=6188baa05f7cfb07163952102f6c46bb5ca985a3c03e5ee40071ece9c66a260c/179859217/video/587282649,587282651,587282650,587282648/subtitles/4601116-English-en,4923171-Portugu%C3%AAs-pt/master.m3u8?external-subs=1",
         photo:
           "http://farm3.static.flickr.com/2449/4052876281_6e068ac860_b.jpg",
         thumb:
