@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { ActionSheetIOS, Platform } from 'react-native';
+import React, { Component } from "react";
+import { ActionSheetIOS, Platform } from "react-native";
 
-import PhotoBrowser from 'react-native-photo-browser';
+import PhotoBrowser from "react-native-photo-browser";
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    header: null,
+    header: null
   };
 
   onSelectionChanged = (media, index, selected) => {
@@ -13,14 +13,14 @@ export default class HomeScreen extends Component {
   };
 
   onActionButton = (media, index) => {
-    if (Platform.OS === 'ios') {
+    if (Platform.OS === "ios") {
       ActionSheetIOS.showShareActionSheetWithOptions(
         {
           url: media.photo,
-          message: media.caption,
+          message: media.caption
         },
         () => {},
-        () => {},
+        () => {}
       );
     } else {
       alert(`handle sharing on android for ${media.photo}, index: ${index}`);
@@ -36,7 +36,7 @@ export default class HomeScreen extends Component {
       displaySelectionButtons,
       startOnGrid,
       enableGrid,
-      alwaysDisplayStatusBar,
+      alwaysDisplayStatusBar
     } = this.props.navigation.state.params.example;
 
     return (
@@ -53,7 +53,7 @@ export default class HomeScreen extends Component {
         onSelectionChanged={this.onSelectionChanged}
         onActionButton={this.onActionButton}
         alwaysDisplayStatusBar={alwaysDisplayStatusBar}
-        customTitle={(index, rowCount) => `${index} sur ${rowCount}`}
+        customTitle={(index, rowCount) => `${index} of ${rowCount}`}
       />
     );
   }
